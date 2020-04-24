@@ -2,6 +2,9 @@ syntax = "proto3";
 
 option go_package = ".;worker";
 option java_package = "jointfaas.worker";
+option java_multiple_files = true;
+option java_outer_classname = "WorkerProto";
+option objc_class_prefix = "HLW";
 package worker;
 
 service Worker {
