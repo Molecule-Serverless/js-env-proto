@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+option go_package = ".;worker";
+option java_package = "jointfaas.worker";
 package worker;
 
 service Worker {

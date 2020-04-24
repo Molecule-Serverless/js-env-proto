@@ -1,8 +1,10 @@
 syntax = "proto3";
 
+option go_package = ".;manager";
+option java_package = "jointfaas.manager";
 package manager;
 
-service Container {
+service Manager {
     rpc Register(RegisterRequest) returns (RegisterResponse) {}
 }
 
