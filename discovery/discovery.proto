@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option go_package = ".;discovery";
+option java_package = "jointfaas.discovery";
+package mesh;
+
+import "google/protobuf/any.proto";
+
+service DiscoveryServer {
+  rpc XDS(stream XDSRequest) returns (stream XDSResponse) {}
+}
+
+message XDSRequest {
+  Instance instance = 1;
+  string type_url = 2;
+  string response_nonce = 3;
+}
+
+message XDSResponse {
+  repeated google.protobuf.Any resources = 1;
+  string response_nonce = 2;
+  string type_url = 3;
+}
+
+message Instance {
+  string provider = 1;
+  string function_name = 2;
+  string url = 3;
+}
