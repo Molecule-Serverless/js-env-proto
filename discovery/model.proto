@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option go_package = ".;model";
+option java_package = "jointfaas.model";
+package mesh;
+
+
+message Info {
+  string url = 1;
+  float price = 2;
+}
+
+message Function {
+  string name = 1;
+  map<string, Info>  infos = 2;
+}
+
+message Step {
+  string functionName = 1;
+}
+
+message Application {
+  string name = 1;
+  repeated Step stepChains = 2;
+}
