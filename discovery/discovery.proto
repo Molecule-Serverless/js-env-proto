@@ -12,18 +12,20 @@ service DiscoveryServer {
 
 message XDSRequest {
   Instance instance = 1;
-  string type_url = 2;
-  string response_nonce = 3;
+  string resourceType = 2;
+  repeated string resourcesName = 3;
+  string responseNonce = 4;
 }
 
 message XDSResponse {
   repeated google.protobuf.Any resources = 1;
-  string response_nonce = 2;
-  string type_url = 3;
+  string responseNonce = 2;
+  string resourceType = 3;
 }
 
 message Instance {
   string provider = 1;
   string function_name = 2;
-  string url = 3;
+  string application_name = 3;
+  string url = 4;
 }
