@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-option go_package = ".;model";
-option java_package = "jointfaas.model";
-package mesh;
+option go_package = "ipads.se.sjtu.edu.cn/mesh-control-plane/pkg/model";
+option java_package = "jointfaas.mesh.model";
+package mesh.model;
 
 
 message Info {
