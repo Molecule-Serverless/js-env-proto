@@ -29,7 +29,7 @@ message FunctionSpec {
 }
 
 message CreateFunctionRequest {
-  FunctionSpec functionSpec = 1;
+  string name = 1;
 }
 
 message CreateFunctionResponse {
@@ -39,7 +39,6 @@ message CreateFunctionResponse {
 
 message DeleteFunctionRequest {
   string name = 1;
-  string provider = 2;
 }
 
 message DeleteFunctionResponse {
