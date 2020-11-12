@@ -30,6 +30,7 @@ message FunctionSpec {
 
 message CreateFunctionRequest {
   string name = 1;
+  model.Method method = 2;
 }
 
 message CreateFunctionResponse {
