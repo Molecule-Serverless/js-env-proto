@@ -9,6 +9,7 @@ message Info {
   string url = 1;
   string internalUrl = 2;
   float price = 3;
+  repeated string instances = 5;
 }
 
 enum Method { // most useful http method, PATCH and more is not necessary. Also you can add it very simple.
