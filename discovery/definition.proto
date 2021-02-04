@@ -4,7 +4,7 @@ option go_package = "ipads.se.sjtu.edu.cn/mesh-control-plane/pkg/definition";
 option java_package = "jointfaas.mesh.definition";
 package mesh.definition;
 
-import "model.proto";
+import "discovery/model.proto";
 
 service DefinitionServer {
   rpc CreateFunction(CreateFunctionRequest) returns (CreateFunctionResponse) {}
